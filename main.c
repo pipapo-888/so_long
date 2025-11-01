@@ -6,20 +6,22 @@
 /*   By: knomura <knomura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:08:10 by knomura           #+#    #+#             */
-/*   Updated: 2025/10/18 19:07:55 by knomura          ###   ########.fr       */
+/*   Updated: 2025/11/01 14:24:50 by knomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void check_extenstion(char *map_name)
+void	check_extenstion(char *map_name)
 {
-	size_t len;
-	
+	size_t	len;
+
 	len = ft_strlen(map_name);
 	if (len < 5 || ft_strncmp(".ber", map_name + len - 4, 4))
-		put_error_free_close(-1, NULL, "Invalid file extension. Must be .ber\n", NULL);	
+		put_error_free_close(-1, NULL, "Invalid file extension. Must be .ber\n",
+			NULL);
 }
+
 int	main(int argc, char **argv)
 {
 	t_info	info;
